@@ -1,0 +1,30 @@
+.Header {
+	background-color: #006064;
+	color: white;
+	z-index: 10;
+}
+
+.Brand {
+	text-decoration: none !important;
+	display: block;
+	margin-top: -2px;
+	padding-top: .3125rem;
+	padding-bottom: .3125rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: inherit;
+	white-space: nowrap;
+}
+
+.Header a {
+	color: white;
+}
+
+@media (max-width: 780px) {
+	.DesktopOnly {
+		display: none;
+	}
+	.Brand {
+		margin: -2px auto 0;
+	}
+}

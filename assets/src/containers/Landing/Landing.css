@@ -1,0 +1,26 @@
+.Landing {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	background-color: #006064;
+}
+
+.Landing h3 {
+	margin: 0 0 20px;
+}
+
+.Landing a {
+	margin: 0 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
