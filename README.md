@@ -50,3 +50,17 @@ yarn start
 // or
 npm start
 ```
+
+### Build App
+
+```
+yarn build
+// or
+npm build
+```
+
+### License
+
+© 2020 | IntoPoint Web App | [MIT licensed].
+
+[mit licensed]: https://github.com/GrafSoul/IntoPoint/blob/master/LICENSE
