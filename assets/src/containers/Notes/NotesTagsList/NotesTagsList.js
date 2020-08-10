@@ -1,73 +1,87 @@
-import React from 'react';
-import {Scrollbars} from 'react-custom-scrollbars';
+import React from "react";
+import { Scrollbars } from "react-custom-scrollbars";
 
-import classes from './NotesTagsList.css'
-import NotesTagsItem from './NotesTagsItem/NotesTagsItem';
-
+import classes from "./NotesTagsList.module.css";
+import NotesTagsItem from "./NotesTagsItem/NotesTagsItem";
 
 const NotesTagsList = (props) => {
-	const {tags, searchTagsList, filter, filterSet, searchValue, searchTags} = props;
+  const {
+    tags,
+    searchTagsList,
+    filter,
+    filterSet,
+    searchValue,
+    searchTags,
+  } = props;
 
-	const dataSearch = (event) => {
-		let value = event.target.value.toLowerCase();
-		let currentTags = tags.filter(item => item.toLowerCase().includes(value));
-		searchTagsList(value, currentTags);
-		filterSet(currentTags[0])
-	};
+  const dataSearch = (event) => {
+    let value = event.target.value.toLowerCase();
+    let currentTags = tags.filter((item) => item.toLowerCase().includes(value));
+    searchTagsList(value, currentTags);
+    filterSet(currentTags[0]);
+  };
 
-	let tagsList = tags && searchValue === '' ? tags.map((item, index) => {
-		return <NotesTagsItem
-			key={index}
-			tag={item}
-			filter={filter}
-			filterSet={filterSet}
-		/>
-	}) : null;
+  let tagsList =
+    tags && searchValue === ""
+      ? tags.map((item, index) => {
+          return (
+            <NotesTagsItem
+              key={index}
+              tag={item}
+              filter={filter}
+              filterSet={filterSet}
+            />
+          );
+        })
+      : null;
 
-	if (searchTags.length !== 0) {
-		tagsList = searchTags ? searchTags.map((item, index) => {
-			return <NotesTagsItem
-				key={index}
-				tag={item}
-				filter={filter}
-				filterSet={filterSet}
-			/>
-		}) : null;
-	}
+  if (searchTags.length !== 0) {
+    tagsList = searchTags
+      ? searchTags.map((item, index) => {
+          return (
+            <NotesTagsItem
+              key={index}
+              tag={item}
+              filter={filter}
+              filterSet={filterSet}
+            />
+          );
+        })
+      : null;
+  }
 
-	return (
-		<div className={classes.TagsList + ' col-md-3'}>
-			<h5 className={classes.TagsListTitle}>Tags</h5>
+  return (
+    <div className={classes.TagsList + " col-md-3"}>
+      <h5 className={classes.TagsListTitle}>Tags</h5>
 
-			<input
-				type="text"
-				className={classes.SearchInput + ' form-control'}
-				placeholder="Search by tags..."
-				onChange={dataSearch}/>
+      <input
+        type="text"
+        className={classes.SearchInput + " form-control"}
+        placeholder="Search by tags..."
+        onChange={dataSearch}
+      />
 
-			{tags.length !== 1 ?
-				<div className={classes.NavTagsList}>
-					<div className={classes.NavTagsListTop} />
+      {tags.length !== 1 ? (
+        <div className={classes.NavTagsList}>
+          <div className={classes.NavTagsListTop} />
 
-					<Scrollbars
-						autoHide
-						autoHideTimeout={1000}
-						autoHideDuration={200}
-						autoHeight
-						autoHeightMax={490}>
-						<nav className="nav flex-column">
-							{tagsList}
-						</nav>
-					</Scrollbars>
+          <Scrollbars
+            autoHide
+            autoHideTimeout={1000}
+            autoHideDuration={200}
+            autoHeight
+            autoHeightMax={490}
+          >
+            <nav className="nav flex-column">{tagsList}</nav>
+          </Scrollbars>
 
-					<div className={classes.NavTagsListBottom} />
-				</div>
-				:
-				<p className={classes.ListEmpty}>(Empty, No Tags)</p>
-			}
-		</div>
-
-	);
+          <div className={classes.NavTagsListBottom} />
+        </div>
+      ) : (
+        <p className={classes.ListEmpty}>(Empty, No Tags)</p>
+      )}
+    </div>
+  );
 };
 
 export default NotesTagsList;
