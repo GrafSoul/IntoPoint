@@ -1,0 +1,32 @@
+.NameChangeCard {
+	margin: 0 auto 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.NameChangeCard h5 {
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.NameChangeCard button {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.NameChangeCard input {
+	outline: none;
+}
+
+.NameChangeCardError {
+	margin: 0 20px 10px;
+}
+
+.NameChangeCardError p {
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	white-space: normal;
+}

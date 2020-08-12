@@ -1,0 +1,36 @@
+.SignUp {
+	padding: 50px 30px 30px;
+}
+
+.SignUpCard {
+	max-width: 500px;
+	min-width: 260px;
+	margin: auto;
+}
+
+.SignUpCard h3 {
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.SignUpCard input {
+	 margin: 0 0 10px;
+}
+
+.SignUpCard button {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0 0 15px;
+}
+
+.SignUpCardError {
+	margin: 0 0 10px;
+}
+
+.SignUpCardError p {
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	white-space: normal;
+}

@@ -1,0 +1,11 @@
+.Bookmarks {
+	padding: 30px 30px 50px;
+
+
+}
+
+.Bookmarks button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}

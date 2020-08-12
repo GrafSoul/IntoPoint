@@ -1,0 +1,36 @@
+.SignIn {
+	padding: 50px 30px 30px;
+}
+
+.SignInCard {
+	max-width: 500px;
+	min-width: 260px;
+	margin: auto;
+}
+
+.SignInCard h3 {
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.SignInCard input {
+	margin: 0 0 10px;
+}
+
+.SignInCard button {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0 0 15px;
+}
+
+.SignInCardError {
+	margin: 0 0 10px;
+}
+
+.SignInCardError p {
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	white-space: normal;
+}

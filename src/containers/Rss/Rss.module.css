@@ -1,0 +1,27 @@
+.RssReader {
+	padding: 30px 30px 50px;
+	position: relative;
+}
+
+.RssReader button {
+	outline: none;
+	border: none;
+
+}
+
+.Reload {
+	cursor: pointer;
+}
+
+.ReloadIcon {
+	font-size: .7em;
+	color: #80cbc4;
+}
+
+.ReloadIcon:hover {
+	color: #006064;
+}
+
+.RemoveBtnGroup button {
+	margin: 0 5px;
+}
