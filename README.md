@@ -4,8 +4,6 @@
 
 Don't keep secret information here :)
 
-### (Under development)
-
 Application for storing links to sites, notes, code, and viewing news.
 
 ---
